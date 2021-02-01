@@ -1,8 +1,8 @@
 // Config object to be passed to Msal on creation
 const msalConfig = {
     auth: {
-        clientId: "36584003-d158-4bc5-bbba-8c1f601eda79",
-        authority: "https://login.microsoftonline.com/bachoang99live.onmicrosoft.com",
+        clientId: "<SPA App ID>",
+        authority: "https://login.microsoftonline.com/<tenant>.onmicrosoft.com",
         redirectUri: "http://localhost"
     },
     cache: {
@@ -36,14 +36,9 @@ const msalConfig = {
 
 // Add here scopes for id token to be used at MS Identity Platform endpoints.
 const loginRequest = {
-    scopes: ["854a30e1-7989-47d7-ab3b-393b1d9db5ee/.default"]
+    scopes: ["<web API App ID>/.default"]
 };
 
-// Add here the endpoints for MS Graph API services you would like to use.
-const graphConfig = {
-    graphMeEndpoint: "https://bhtestapi123.azurewebsites.net/WeatherForecast",
-    graphMailEndpoint: "https://graph.microsoft.com/v1.0/me/messages"
-};
 
 const apiConfig = {
     myAPIEndpoint: "https://bhtestapi123.azurewebsites.net/WeatherForecast"
@@ -51,10 +46,6 @@ const apiConfig = {
 
 // Add here scopes for access token to be used at MS Graph API endpoints.
 const tokenRequest = {
-    scopes: ["854a30e1-7989-47d7-ab3b-393b1d9db5ee/.default"],
+    scopes: ["<web API App ID>/.default"],
     forceRefresh: false // Set this to "true" to skip a cached token and go to the server to get a new token
-};
-
-const silentRequest = {
-    scopes: ["openid", "profile", "User.Read", "Mail.Read"]
 };
