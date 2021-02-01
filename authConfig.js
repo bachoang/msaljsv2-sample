@@ -3,7 +3,7 @@ const msalConfig = {
     auth: {
         clientId: "<SPA App ID>",
         authority: "https://login.microsoftonline.com/<tenant>.onmicrosoft.com",
-        redirectUri: "http://localhost"
+        redirectUri: "http://localhost:3000/"
     },
     cache: {
         cacheLocation: "sessionStorage", // This configures where your cache will be stored
